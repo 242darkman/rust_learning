@@ -1,0 +1,7 @@
+[package]
+name = "numeric_privitives"
+authors = ["VOUVOU Brandon"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
