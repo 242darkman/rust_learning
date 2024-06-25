@@ -1,0 +1,7 @@
+[package]
+name = "array_vectors"
+version = "0.1.0"
+authors = ["VOUVOU Brandon"]
+edition = "2021"
+
+[dependencies]
