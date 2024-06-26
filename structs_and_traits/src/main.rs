@@ -1,6 +1,23 @@
 mod models;
 
 use models::person::Person;
+use models::student::Student;
+use uuid::Uuid;
+
+fn last_test() {
+    // Création d'un étudiant
+    let student_id = Uuid::new_v4();
+    let student = Student::new(
+        student_id,
+        "John Landis".to_string(),
+        "johnlandis@betterave.com".to_string(),
+        "0123456789".to_string(),
+        "20 rue Simone Veil, 69200 Venissieux".to_string(),
+        "2023-04-01T00:00:00Z".to_string(),
+        "2023-04-01T00:00:00Z".to_string(),
+    );
+    println!("L'étudiant crée est : {:?} \n", student);
+}
 
 fn test_person() {
     let mut person = Person::new(
@@ -34,6 +51,7 @@ fn test_person() {
 
 
 fn main() {
+    last_test();
 
     println!("**----------------------------Test for Person Struct-------------------------------**");
     println!("**---------------------------------------------------------------------------------**");
