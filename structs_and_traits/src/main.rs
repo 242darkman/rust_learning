@@ -1,6 +1,7 @@
 mod models;
 
 use models::person::Person;
+use models::pet::Pet;
 use models::student::Student;
 use uuid::Uuid;
 
@@ -17,6 +18,32 @@ fn last_test() {
         "2023-04-01T00:00:00Z".to_string(),
     );
     println!("L'étudiant crée est : {:?} \n", student);
+
+    // Création d'un animal de compagnie
+    let pet_id = Uuid::new_v4();
+    let mut pet = Pet::new(
+        pet_id,
+        "Milou".to_string(),
+        5,
+        true,
+    );
+    println!("L'animal crée est: {:?} \n", pet);
+
+    // Modification de l'animal de compagnie
+    pet.set_name("Max".to_string());
+    pet.set_age(6);
+    pet.set_vaccinated(false);
+
+    println!("L'animal modifié est: {:?} \n", pet);
+
+    // Vérification si l'animal est autorisé
+    if pet.allow_pet() {
+        println!("{} est autorisé", pet.get_name());
+    } else {
+        println!("{} n'est pas autorisé\n", pet.get_name());
+    }
+
+
 }
 
 fn test_person() {
