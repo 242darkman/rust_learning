@@ -4,6 +4,8 @@ mod traits;
 use models::person::Person;
 use models::pet::Pet;
 use models::student::Student;
+use models::car::Car;
+use traits::vehicule::Vehicle as _;
 use uuid::Uuid;
 
 fn last_test() {
@@ -45,6 +47,15 @@ fn last_test() {
     }
 
 
+    println!("**-----------------------------------------------------------**");
+    let mut car = Car {
+        model: "BMW".to_string(),
+        color: "blue".to_string(),
+        is_on_motion: false,
+        current_speed: 0,
+    };
+    car.start();
+    car.stop();
 }
 
 fn test_person() {
