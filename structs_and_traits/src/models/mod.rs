@@ -3,4 +3,5 @@
 pub mod pet;
 pub mod student;
 pub mod car;
+pub mod boat;
 pub mod person;

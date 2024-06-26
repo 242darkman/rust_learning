@@ -1,6 +1,7 @@
 mod models;
 mod traits;
 
+use models::boat::Boat;
 use models::person::Person;
 use models::pet::Pet;
 use models::student::Student;
@@ -54,7 +55,16 @@ fn last_test() {
         is_on_motion: false,
         current_speed: 0,
     };
+
+    let mut my_boat = Boat {
+        name: "Trucker".to_string(),
+        is_on_motion: false,
+        current_speed: 0,
+    };
+
+    my_boat.start();
     car.start();
+    my_boat.stop();
     car.stop();
 }
 
