@@ -1,4 +1,5 @@
 mod models;
+mod traits;
 
 use models::person::Person;
 use models::pet::Pet;
