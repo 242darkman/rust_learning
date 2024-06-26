@@ -1,0 +1,11 @@
+[package]
+name = "structs_and_traits"
+authors = ["VOUVOU Brandon"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dependencies.uuid]
+version = "1.9.1"
+features = ["v4", "fast-rng", "macro-diagnostics"]
