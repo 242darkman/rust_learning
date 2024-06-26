@@ -1,6 +1,7 @@
 mod models;
 mod traits;
 
+use models::airplane::Airplane;
 use models::boat::Boat;
 use models::person::Person;
 use models::pet::Pet;
@@ -62,10 +63,18 @@ fn last_test() {
         current_speed: 0,
     };
 
+    let mut my_airplane = Airplane {
+        altitude: 0.0,
+        is_on_motion: false,
+        current_speed: 0,
+    };
+
     my_boat.start();
     car.start();
+    my_airplane.start();
     my_boat.stop();
     car.stop();
+    my_airplane.stop();
 }
 
 fn test_person() {
