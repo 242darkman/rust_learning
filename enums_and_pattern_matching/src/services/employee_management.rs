@@ -63,7 +63,7 @@ impl EmployeeManagement {
     let name = name.trim();
 
     if let Some(index) = self.employees.iter().position(|employee| employee.get_name() == name) {
-        let mut fired_employee: &mut Employee = &mut self.employees[index];
+        let fired_employee: &mut Employee = &mut self.employees[index];
         fired_employee.set_status(EmployeeStatus::Fired.to_string());
         self.employees.remove(index);
         println!("Employé licencié.");
